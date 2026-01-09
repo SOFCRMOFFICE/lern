@@ -1,3 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
 
-@import "tailwindcss";
+@theme {
+  --color-pastel-blush: #fdc5f5;
+  --color-pastel-mauve: #f7aef8;
+  --color-pastel-lavender: #b388eb;
+  --color-pastel-wisteria: #8093f1;
+  --color-pastel-sky: #72ddf7;
+  --color-pastel-dark: #050505;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Syne', sans-serif;
+}
+
+:root {
+  --background: var(--color-pastel-dark);
+  --foreground: var(--color-pastel-blush);
+  --primary: var(--color-pastel-sky);
+  --secondary: var(--color-pastel-wisteria);
+  --accent: var(--color-pastel-lavender);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
